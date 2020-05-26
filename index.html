@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>E-COMMERCE PAGE</title>
+
+    <script
+      src="https://kit.fontawesome.com/f017736faf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--Header-->
+    <header>
+      <nav id="nav">
+        <div class="content-logo">
+          <img src="img/banner-logo.png" alt="logo" />
+        </div>
+        <ul class="desktop-ul">
+          <li class="elements li-buttons">
+            <a href="carrito"><i class="fa fa-shopping-cart"></i> </a>
+          </li>
+          <li class="elements li-buttons">
+            <a href="registro"><i class="fa fa-sign-in"></i> Registro</a>
+          </li>
+          <li class="elements li-buttons">
+            <a href="login"><i class="fas fa-user"></i> Ingresar</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Sidebar-->
+    <div id="desktop-sidebar">
+      <a class="active" href="./"><i class="fa fa-fw fa-home"></i> Inicio</a>
+      <a href="computadoras"
+        ><i class="fa fa-fw fa-desktop"></i> Computadoras</a
+      >
+      <a href="celulares"><i class="fa fa-fw fa-mobile"></i> Celulares</a>
+      <a href="audioyvideo"><i class="fa fa-fw fa-music"></i> Audio & Video</a>
+    </div>
+
+    <!-- Page content -->
+    <div id="content">
+      <div class="content-slideshow">
+        <h2>nuevo</h2>
+
+        <div class="content-slideshow__container">
+          <div class="mySlides fade">
+            <img src="img/slidephoto.jpg" style="width: 100%;" />
+          </div>
+
+          <div class="mySlides fade">
+            <img src="img/slidephoto2.jpg" style="width: 100%;" />
+          </div>
+
+          <div class="mySlides fade">
+            <img src="img/slidephoto3.jpg" style="width: 100%;" />
+          </div>
+        </div>
+        <br />
+
+        <div style="text-align: center;">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <div class="content-grid">
+        <h2>productos</h2>
+
+        <div class="content-grid__products">
+          <div class="row">
+            <div class="column">
+              <a href="#"><img src="img/photo_product.jpg" /></a>
+              <a href="#">
+                <h3>Product Name</h3>
+              </a>
+              <p>Description of product</p>
+              <a href="#">
+                <h4 id="btn-buy">Buy</h4>
+              </a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="img/photo_product.jpg" /></a>
+              <a href="#">
+                <h3>Product Name</h3>
+              </a>
+              <p>Description of product</p>
+              <a href="#">
+                <h4 id="btn-buy">Buy</h4>
+              </a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="img/photo_product.jpg" /></a>
+              <a href="#">
+                <h3>Product Name</h3>
+              </a>
+              <p>Description of product</p>
+              <a href="#">
+                <h4 id="btn-buy">Buy</h4>
+              </a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="img/photo_product.jpg" /></a>
+              <a href="#">
+                <h3>Product Name</h3>
+              </a>
+              <p>Description of product</p>
+              <a href="#">
+                <h4 id="btn-buy">Buy</h4>
+              </a>
+            </div>
+          </div>
+
+          <div class="row-2">
+            <div class="column">
+              <a href="#"><img src="img/photo_product.jpg" /></a>
+              <a href="#">
+                <h3>Product Name</h3>
+              </a>
+              <p>Description of product</p>
+              <a href="#">
+                <h4 id="btn-buy">Buy</h4>
+              </a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="img/photo_product.jpg" /></a>
+              <a href="#">
+                <h3>Product Name</h3>
+              </a>
+              <p>Description of product</p>
+              <a href="#">
+                <h4 id="btn-buy">Buy</h4>
+              </a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="img/photo_product.jpg" /></a>
+              <a href="#">
+                <h3>Product Name</h3>
+              </a>
+              <p>Description of product</p>
+              <a href="#">
+                <h4 id="btn-buy">Buy</h4>
+              </a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="img/photo_product.jpg" /></a>
+              <a href="#">
+                <h3>Product Name</h3>
+              </a>
+              <p>Description of product</p>
+              <a href="#">
+                <h4 id="btn-buy">Buy</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+        <div class="contenedor-footer">
+            <p>&copy Copyright 2020 - Diseñado por: César</p>
+        </div>
+    </footer>
+    
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 6000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
